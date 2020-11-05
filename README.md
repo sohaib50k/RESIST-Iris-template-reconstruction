@@ -5,7 +5,7 @@ For starters the implementation uses Keras and Tensorflow, other needed packages
 
 
 # Training process 
-RESIST takes feature vectors as inputs and outputs reconstructed iris images. The feature vector extraction process begins with iris segmentation. The [segmentation pipeline](https://github.com/sohaib50k/Unconstrained-iris-segmentation-using-Mask-R-CNN) is available on Github. The segmentation pipeline outputs square segmented iris images with the background set to black. These segmented images are fed to the [recognition pipeline] called ThirdEye. The code for the recognition pipeline is available in this repository. RESIST uses a custom Keras generator to load data. The data format is as follows:
+RESIST takes feature vectors as inputs and outputs reconstructed iris images. The feature vector extraction process begins with iris segmentation. The [segmentation pipeline](https://github.com/sohaib50k/Unconstrained-iris-segmentation-using-Mask-R-CNN) is available on Github. The segmentation pipeline outputs square segmented iris images with the background set to black. These segmented images are fed to the [recognition pipeline](https://github.com/sohaib50k/ThirdEye---Iris-recognition-using-triplets) called ThirdEye. The code for the recognition pipeline is available in this repository. RESIST uses a custom Keras generator to load data. The data format is as follows:
 
 * Training data
   * Image folder
@@ -26,18 +26,18 @@ Some sample reconstructed images from the paper:
 ![Reconstructed iris images](https://i.ibb.co/VHzjr3w/Picture1.png)
 
 
-If you use this repository consider citing our [papers](https://arxiv.org/pdf/2007.15850.pdf)
+If you use this repository consider citing our [paper](https://arxiv.org/pdf/2007.15850.pdf)
 
-@article{ahmad2020resist,
+``` @article{ahmad2020resist,
   title={Resist: Reconstruction of irises from templates},
   author={Ahmad, Sohaib and Fuller, Benjamin},
   journal={arXiv preprint arXiv:2007.15850},
   year={2020}
 }
-
+``` 
 [Recognition paper](https://ieeexplore.ieee.org/abstract/document/9185998)
 
-@INPROCEEDINGS{9185998,author={S. {Ahmad} and B. {Fuller}},
+``` @INPROCEEDINGS{9185998,author={S. {Ahmad} and B. {Fuller}},
 booktitle={2019 IEEE 10th International Conference on Biometrics Theory, Applications and Systems (BTAS)},
 title={ThirdEye: Triplet Based Iris Recognition without Normalization},
 year={2019},
@@ -45,4 +45,4 @@ volume={},
 number={},
 pages={1-9},
 doi={10.1109/BTAS46853.2019.9185998}}
-
+``` 
